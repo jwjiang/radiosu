@@ -1,0 +1,8 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+.osu.ppy.sh	TRUE	/	FALSE	1440617744	phpbb3_2cjk5_k	760cfd23c5a8a884
+.osu.ppy.sh	TRUE	/	FALSE	1440617744	phpbb3_2cjk5_sid	f044e64563698ea0cdb897ab98a99416
+.osu.ppy.sh	TRUE	/	FALSE	1440617744	phpbb3_2cjk5_u	2438727
+.ppy.sh	TRUE	/	FALSE	1469734544	__cfduid	da53b7c39d9affdd7f921863529fd77a91438198544
