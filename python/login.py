@@ -33,8 +33,7 @@ class WebLogin(object):
 
         # pretend we're a web browser and not a python script
         self.opener.addheaders = [('User-agent',
-            'Mozilla/5.0')
-        ]
+            'Mozilla/5.0')]
 
         # authenticate with site
         self.login()

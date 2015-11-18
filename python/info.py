@@ -18,12 +18,12 @@ import grequests
 start_time = 0
 global_counter = 0
 total_dl_time = 0
+
 baseurl = 'https://osu.ppy.sh/s/'
 title_pattern = "<td width=0%>Title:</td><td class=\"colour\"><a href='/p/beatmaplist\?q=.*'>(.*)</a></td>"
 artist_pattern = "<td width=0%>Artist:</td><td width=23% class='colour'><a href='/p/beatmaplist\?q=.*'>(.*)</a></td>"
 genre_pattern = "<td width=0%>Genre:</td><td class=\"colour\"><a href='/p/beatmaplist\?g=.*'>(.*)</a> \(<a href=\'" \
                 "/p/beatmaplist\?la=.*'>.*</a>\)</td>"
-
 
 
 def parseWorker(meta_list, session, listlock, total, stepsize):
@@ -69,7 +69,6 @@ def parse(url, session, parser, meta_list, listlock):
     global_counter += 1
     listlock.release()
 
-
 def parse_bs(parser, source):
     '''
     souped = BeautifulSoup(source, "html.parser")
@@ -85,10 +84,10 @@ def parse_bs(parser, source):
     meta_tuple = (title, artist, genre)
     return meta_tuple
 
-
 def getinfo(list, count=None):
     global start_time
     start_time = time.time()
+
 
     return grequests_download(list)
     #return pooled_download(list)
@@ -138,8 +137,6 @@ def pooled_download(list):
             print(str(global_counter) + '/' + str(total) + ' processed, ' +
                              'estimated time remaining: %.0f seconds' % time_left)
     return meta_list
-
-
 
 dlqueue = Queue.Queue()
 def multi_download(list):

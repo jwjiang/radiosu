@@ -8,6 +8,7 @@ import os
 import glob
 import shutil
 
+
 def main():
     base_url = "https://osu.ppy.sh/d/"
 
